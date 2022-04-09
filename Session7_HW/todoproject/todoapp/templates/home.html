@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <h4>deadline 빠른 것이 상단</h4>
+    <div>
+        <ul>
+            {% for list in lists %}
+            <li>
+                <a href="{% url 'detail' list.pk %}">{{ list.title }}</a>
+                <br>
+                <br>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="{% url 'new' %}">> to do 쓰러 가기</a>
+</body>
+</html>

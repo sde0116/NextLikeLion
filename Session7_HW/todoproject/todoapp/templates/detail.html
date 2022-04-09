@@ -1,0 +1,35 @@
+<!-- { { date|date:'표현식' } }
+
+기준 시간 : 2020-04-24 14:10:01 (KST)
+
+{ { date|date:'Y년 m월 d일' } }
+2020년 04월 24일 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>To Do 제목</h2>
+        <p>{{ list.title }}</p>
+    </div>
+    <div>
+        <h2>To Do 내용</h2>
+        <p>{{ list.content }}</p>
+    </div>
+    <div>
+        <h2>To Do 마감기한</h2>
+        <p>{{ list.deadline }}</p>
+    </div>
+    <br>
+    <a href="{%	url 'home' %}">홈으로</a>
+    <a href="{%	url 'edit' list.pk %}">수정하기</a>
+    <a href="{%	url 'delete' list.pk %}">삭제하기</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+div {
+    color: rgb(94, 94, 250);
+}
+
+input[type=text] {
+    width: 150px;
+    height: 17px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(245, 187, 79);
+    padding-left: 10px;
+    background-color: rgb(227, 241, 253);
+}
+
+textarea {
+    font-size: 15px;
+    border: 2px solid rgb(245, 187, 79);
+    border-radius: 15px;
+    padding-left: 10px;
+    background-color: rgb(227, 241, 253);
+}
+
+input[type=date] {
+    width: 150px;
+    height: 17px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(245, 187, 79);
+    padding-left: 10px;
+    background-color: rgb(227, 241, 253);
+}
+
+button {
+    background-color: rgb(227, 241, 253) ;
+    border: 2px solid rgb(245, 187, 79);
+    border-radius: 3px;
+}
+
+input:hover, textarea:hover, button:hover {
+    background-color: rgb(252, 233, 199) ;
+}
