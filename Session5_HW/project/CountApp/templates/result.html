@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>글자를 입력해 보세요!</h1>
+    <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <textarea id="input1" name="text" cols="50" rows="10"></textarea>
+        <br />
+        <input id="input2" type="submit" value="제출" />
+    </form>
+    <div class="impo">
+        <div class="num1">
+            <p>입력한 텍스트</p>
+            <p>{{text}}</p>
+        </div>
+        <div class="num2">
+            <p>글자수</p>
+            <p>{{total_lens}}</p>
+        </div>
+        <div class="num3">
+            <p>공백 제외 글자수</p>
+            <p>{{no_blank_lens}}</p>
+        </div>
+        <div class="num4">
+            <p>단어수</p>
+            <p>{{words}}</p>
+        </div>        
+    </div>
+
+</body>
+</html>

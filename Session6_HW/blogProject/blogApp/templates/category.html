@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'category.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Jua&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2>글 목록</h2>
+    <ul>
+        {% for article in articles %}
+        <li>
+            <a href="{% url 'detail' article.id %}"><b>ෆ </b>{{ article.title }}</a>
+            <!-- article.title에서 title 이 어디서 나온 것? views.py에서 정의한 title? -->
+        </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+    <a href="{% url 'new' %}">> 글 쓰러 가기📝</a>
+</body>
+</html>

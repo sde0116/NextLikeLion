@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'detail2.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Jua&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2>💌 글 상세 페이지</h2>
+    <div>
+        <h3>📌 제목</h3>
+        <div>{{ article.title }}</div>
+    </div>
+    <div>
+        <h3>📜 내용</h3>
+        <div>{{ article.content }}</div> 
+    </div>
+    <div>
+        <h3>⏰ 글 작성 시각</h3>
+        <div>{{ article.datetime }}</div> 
+    </div>
+    <br>
+    <a href="{% url 'list' %}">> 전체 목록으로 돌아가기</a>
+</body>
+</html>

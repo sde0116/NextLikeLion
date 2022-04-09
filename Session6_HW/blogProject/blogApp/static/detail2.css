@@ -1,0 +1,27 @@
+body {
+    font-family: 'Jua', sans-serif;
+}
+
+h2{
+    color: green;
+    font-weight: 100;
+}
+
+body {
+    font-family: 'Jua', sans-serif;
+}
+
+h3{
+    color: green;
+    font-weight: 100;
+}
+
+a { 
+    text-align: center;
+     text-decoration: none; /* 링크의 밑줄 제거 */ 
+     color: inherit; /* 링크의 색상 제거 */ 
+    }
+
+a:hover {
+    color: rgb(1, 175, 1);
+    }

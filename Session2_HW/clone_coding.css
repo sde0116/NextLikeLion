@@ -1,0 +1,189 @@
+.all {
+    display: flex;
+    flex-direction: row;
+}
+
+.blank {
+    display: flex;
+    flex-grow: 1;
+}
+
+.content {
+    border: 2pt solid rgb(226, 226, 226) ;
+    border-radius: 10px;
+    /* border-right: 2pt solid rgb(226, 226, 226) ; */
+    display: flex; 
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.top_bar {
+    /* position: fixed;
+    top: 0px; */
+
+    /* position: sticky;
+    top: 0px;
+    align-self: center;    */
+
+    padding-left: 10pt;
+    padding-right: 10pt;
+    padding-top: 5pt;
+    font-size: 20pt;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_bar img {
+    width: 30px;
+    height: 30px;
+}
+
+.first {
+    padding-left: 10pt;
+    padding-right: 10pt;
+}
+
+.profile {
+     display: flex;   
+}
+
+.profile img {
+    display: flex; 
+    flex-grow: 1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.number_impo {
+    font-size: 13pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.post {
+    text-align: center;
+}
+
+.follower {
+    text-align: center;
+}
+
+.following {
+    text-align: center;
+}
+
+.second {
+    padding-left: 5pt;
+    padding-right: 5pt;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 {
+    /* text-align: center; */
+    /* 왜 가운데 정렬이 안 되는 거니? */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border: 2pt solid rgb(226, 226, 226);
+    border-radius: 5px;
+}
+
+.box3 {
+    width: 5px;
+}
+
+.box2 {
+    display: flex;
+}
+
+.box2 img {
+    width: 30px;
+    border: 2pt solid rgb(226, 226, 226);
+    border-radius: 5px;
+}
+
+.third {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* .long_box1 {
+    border-bottom: 1pt solid black;    
+} */
+
+.long_box1 img {
+    width: 50px;
+    height: 50px;
+}
+
+.long_box2 img {
+    width: 37px;
+    height: 45px;
+}
+
+.pic1 {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch;     */
+}
+
+.pic1 img {
+
+    width: 150px;
+    height: 150px;
+    flex-grow: ;
+
+}
+
+.pic2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pic2 img {
+    width: 150px;
+    height: 150px;
+    flex-grow: 1;
+}
+
+.pic3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pic3 img {
+    width: 150px;
+    height: 150px;
+    flex-grow: 1;
+}
+
+
+
+.bottom_bar {
+    /* position: fixed;
+    bottom: 0; */
+    padding-left: 20pt;
+    padding-right: 20pt;
+    padding-bottom: 5pt;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.bottom_bar img {
+    display: flex;
+    justify-content: space-around;
+    width: 35px;
+    height: 35px;
+}
+
+/* img[href*='profile'] {
+    border-radius: 50px;
+} */

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'new2.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Jua&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2>📝글 쓰기</h2>
+    <form action="{% url 'new' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <div>title</div>
+            <input type="text" name="title" />
+        </div>
+        <div>
+            <div>content</div>
+            <textarea name="content" cols="30" rows="10"></textarea>
+        </div>
+        <select name = 'category' id = 'category' >
+            <option value="none">=== category ===</option>
+            <option value="hobby">취미(hobby)</option>
+            <option value="food">음식(food)</option>
+            <option value="programming">프로그래밍(programming)</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">작성 완료</button>
+    </form>
+</body>
+</html>

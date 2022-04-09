@@ -1,0 +1,70 @@
+*{
+    background-color: #fce6fc;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    color:rgb(247, 182, 97);
+    font-size: 50px;
+    text-align: center;
+}
+
+h3 {
+    color:rgb(124, 155, 248);
+    font-size: 25px;
+    text-align: center;
+}
+
+h4 {
+    color:rgb(124, 155, 248);
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    font-weight: 700;
+    color:rgb(124, 155, 248);
+    font-size: 25px;
+    text-align: center;
+}
+
+.baking {
+    margin: auto;
+    width:30%;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.music {
+    margin: auto;
+    width:30%;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.bubbletea {
+    margin: auto;
+    width:30%;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.like {
+    margin: auto;
+    text-align: center;
+    display: flex;
+}
+
+img {
+    float: inherit;
+}
+
+video {
+    float: inherit;
+}
+
+footer {
+    margin: auto;
+    text-align: center;
+}
+}

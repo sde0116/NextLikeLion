@@ -1,0 +1,29 @@
+h1 {
+    color:rgb(255, 150, 63);
+}
+
+#input1 {
+    border: 2px solid rgb(255, 150, 63);
+    border-radius: 10px;
+    color: rgb(43, 99, 255);
+}
+
+p {
+    font-weight: 1000;
+    color: rgb(43, 99, 255);
+    }
+
+.impo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    width: 370px;
+    height: 150px;
+    border: 2px solid rgb(255, 150, 63);
+    border-radius: 10px;
+}
+
+.num1, .num2, .num3, .num4 {
+    text-align: center;
+}
