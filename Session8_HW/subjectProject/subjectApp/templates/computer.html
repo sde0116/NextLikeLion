@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'computer.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>컴퓨터학과 전공</h2>
+    <ul>
+        {% for subject in computerMajor %}
+        <div class="list">
+            <li>
+                <div>
+                    <span class="bold">{{ subject.subject_name }}</span>
+                    <span>| {{ subject.major }} |</span>
+                    <span>{{ subject.prof_name }}</span>
+
+                    <a href="{% url 'editSubject' subject.pk %}" class="button">수정</a>
+                    <a href="{% url 'deleteSubject' subject.pk %}" class="button">삭제</a>
+
+                    <div class="memos">{{subject.memo|linebreaks }}</a></div>   
+                </div>
+
+            </li>
+        </div>
+        {% endfor %}        
+    </ul>
+</body>
+</html>
