@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'app/list_page.css' %}">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 목록</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="page-container">
+      <header class="page-header">
+        <h2>게시글 리스트 페이지</h2>
+      </header>
+      <br>
+      <a class="write-btn" href="{% url 'create_page' %}">게시글 작성하기</a>
+
+      <div class="content-container">
+        <h3>게시글 목록</h3>
+        <!-- 1. 조건문 이용해서 아래 p태그는 게시글이 없을 때만 보이도록 하기-->
+        {% if not posts %}
+        <p class="if-no-post">지금은 게시글이 없네요..</p>
+        {% endif %}
+
+        {% for post in posts %}
+        <a class="post-title" href="{% url 'detail_page' post.pk %}">{{ post.title }} (조회수: {{ post.hit }})</a>
+        {% endfor %}
+        <!-- 2. 반복문을 이용하여 게시글들(posts)의 제목을 a태그로 감싸서 리스팅하기 
+              2-1. 이때, a태그의 class는 "post-title"으로 하기 
+              2-2. a태그의 href 속성을 이용해서 해당 게시글의 디테일 페이지('detail_page')와 연결하기 
+              (2-2가 어렵다면 detail_page.html을 참고하세요)
+
+            !! content-container div 내부에 작성해주세요~
+        -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
