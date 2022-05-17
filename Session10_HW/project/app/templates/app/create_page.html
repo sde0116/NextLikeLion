@@ -1,52 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'app/create_page.css' %}">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>게시글 작성</title>
-</head>
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/create_page.css' %}">
+{% endblock css %}
 
-<body>
-  <div class="page-wrapper">
-    <div class="page-container">
-      <header class="page-header">
-        <h2>게시글 작성 페이지</h2>
-      </header>
-      <br>
-      <a class="btn" href="{% url 'list_page' %}">뒤로가기</a>
+{% block header %}
+게시글 작성 페이지
+{% endblock %}
 
-      <div class="content-container">
-        <!--
-          1) form을 작성한다.
-          2) form 내부에 다음을 작성한다.
-            2-1) csrf 공격을 막는 구문을 작성한다.
-            2-2) input, textarea 태그를 이용하여 입력값을 받을 요소들을 작성한다.
-              *input의 name은 "title"로 설정해야 하며, textarea의 name은 "content"로 설정해야 한다.
-              *이때 label 태그릁 이용하여 각각의 인풋의 이름을 명시하면 더 좋다.
-              *placeholder 속성을 통해 안내문을 작성해주면 좋다.
-            2-3) form을 제출하기 위한 버튼을 만든다.
+{% block write %}
+<a class="btn" href="{% url 'list_page' %}">뒤로가기</a>
+{% endblock %}
 
-          !! content-container div 내부에 form을 작성해주세요
-        -->
-        <form method="POST">
-          {% csrf_token %}
-          <label for="title">제목</label><br>
-          <input id="title" name="title" placeholder="제목" /><br><br>
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+  <label for="title">제목</label><br>
+  <input id="title" name="title" placeholder="제목" /><br><br>
 
-          <label for="content">내용</label><br>
-          <textarea id="content" name="content" placeholder="내용"></textarea><br><br>
+  <label for="content">내용</label><br>
+  <textarea id="content" name="content" placeholder="내용"></textarea><br><br>
 
-          <label for="address">URL</label><br>
-          <input id="address" name="address" placeholder="주소" /><br><br>
+  <label for="address">URL</label><br>
+  <input id="address" name="address" placeholder="주소" /><br><br>
 
-          <button type="submit">작성</button>
-        </form>
-      </div>
-    </div>
-</body>
-
-</html>
+  <button type="submit">작성</button>
+</form>
+{% endblock %}
