@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/create_page.css' %}">
+{% endblock css %}
+
+{% block header %}
+게시글 작성 페이지
+{% endblock %}
+
+{% block write %}
+<a class="btn" href="{% url 'list_page' %}">뒤로가기</a>
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+  <label for="title">제목</label><br>
+  <input id="title" name="title" placeholder="제목" /><br><br>
+
+  <label for="content">내용</label><br>
+  <textarea id="content" name="content" placeholder="내용"></textarea><br><br>
+
+  <label for="address">URL</label><br>
+  <input id="address" name="address" placeholder="주소" /><br><br>
+
+  <button type="submit">작성</button>
+</form>
+{% endblock %}
